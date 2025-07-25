@@ -1,0 +1,246 @@
+@charset "utf-8";
+
+/*
+   Author: Diana Mora
+   Final Project: Ecuador Travel
+   Filename: Css.css
+*/
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #003366;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+  padding: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #003366;
+  color: #fff;
+  border-radius: 5px;
+}
+
+a:visited {
+  color: #005599;
+}
+
+/* Hero Image Styles */
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  z-index: 2;
+}
+
+/* Section Titles */
+h2 {
+  color: #003366;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+h3 {
+  color: #005599;
+}
+
+/* Section & Paragraph Styling */
+section {
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  margin: 1rem auto;
+  max-width: 1000px;
+  border-radius: 8px;
+}
+
+section img {
+  width: 45%;
+  margin: 1rem;
+  border-radius: 8px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+table th {
+  background-color: #e0e0e0;
+  color: #003366;
+}
+
+/* Lists */
+li {
+  margin-left: 2rem;
+  font-size: 1.05rem;
+}
+
+/* Review Page Section */
+.review-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.review-box {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.review-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Review Image Section */
+.review-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 10px;
+}
+
+/* About Section */
+.about-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.about-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay text: fixed in the top-right vertical center */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #000;
+  line-height: 1.6;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  animation: fadeSlideIn 1.2s ease-out both;
+}
+
+@media screen and (max-width: 768px) {
+  .overlay-text {
+    width: 80%;
+    right: 10%;
+    top: 10%;
+    transform: none;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #003366;
+  color: white;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-image {
+    height: 250px;
+  }
+
+  section img {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .overlay-text {
+    width: 90%;
+    right: 5%;
+    top: 5%;
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+}
